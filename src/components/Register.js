@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { Container, Form, Row, Col, Button, InputGroup, Card } from 'react-bootstrap';
 
-import { signupDetails,formState } from './Recoil-state/atom'
+import { signupDetails, formState } from './Recoil-state/atom'
 
 
 const Register = () => {
@@ -80,7 +80,7 @@ const Register = () => {
     }
   }
 
-  const changeToLogin = () =>{
+  const changeToLogin = () => {
     changeLoginCard(1)
   }
 
@@ -145,24 +145,20 @@ const Register = () => {
             <Row>
               <Col>
                 <Form.Group>
-                  <InputGroup>
-                    <Form.Control
-                      type={showPassword ? "text" : "password"}
-                      placeholder="Password"
-                      name="password"
-                      value={password}
-                      onChange={onValueChange}
-                      className={error.password ? "show-error" : ""} />
-                    {!error.password && <InputGroup.Append>
-                      <Button
-                        variant="light"
-                        className="three-sided-border"
-                        size="sm"
-                        onClick={toggleShow}>
-                        {showPassword ? "Hide" : "Show"}
-                      </Button>
-                    </InputGroup.Append>}
-                  </InputGroup>
+                  <Form.Control
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={onValueChange}
+                    className={error.password ? "show-error" : ""} />
+                  <Button
+                    className="icon-style"
+                    variant="light"
+                    size="sm"
+                    onClick={toggleShow}>
+                    {showPassword ? "Hide" : "Show"}
+                  </Button>
                   {error.password && <Form.Text className="text-danger">{error.password}</Form.Text>}
                 </Form.Group>
               </Col>
@@ -179,8 +175,8 @@ const Register = () => {
         </Container>
       </Card.Footer>
       <Container>
-          <Card.Text>Already have an account ? <Card.Link onClick={changeToLogin}>Login</Card.Link> </Card.Text>
-        </Container>
+        <Card.Text>Already have an account ? <Card.Link onClick={changeToLogin}>Login</Card.Link> </Card.Text>
+      </Container>
     </Card>
   )
 }

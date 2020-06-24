@@ -24,11 +24,6 @@ body{
     margin: 4% auto;
 }
 
-.three-sided-border{
-  border: 1px solid #ced4da;
-  border-left: 0;
-  color: darkslategrey;
-}
 
 .btn-light {
    
@@ -62,4 +57,13 @@ body{
 }
 .message{
   color: green;
+}
+.icon-style{
+  position: absolute;
+  margin: -34px 0px -36px 180px;
+  border-radius: 45%;
+  background-color: #F3F5F9 !important;
+}
+.btn-primary {
+  background-color: #2E6CC0;
 }

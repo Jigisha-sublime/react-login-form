@@ -115,7 +115,6 @@ const Login = () => {
             <Row>
               <Col>
                 <Form.Group>
-                  <InputGroup>
                     <Form.Control
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
@@ -123,16 +122,13 @@ const Login = () => {
                       value={password}
                       onChange={onValueChange}
                       className={errMessage.password ? "show-error" : ""} />
-                    {!errMessage.password && <InputGroup.Append>
                       <Button
                         variant="light"
-                        className="three-sided-border"
+                        className="icon-style"
                         size="sm"
                         onClick={toggleShow}>
                         {showPassword ? "Hide" : "Show"}
                       </Button>
-                    </InputGroup.Append>}
-                  </InputGroup>
                   {errMessage.password && <Form.Text className="text-danger">{errMessage.password}</Form.Text>}
                 </Form.Group>
               </Col>
