@@ -3,7 +3,9 @@
 
 
 body{
-  background-color: cadetblue;
+  background-image: url("./assets/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .App {
   text-align: center;
@@ -12,6 +14,15 @@ body{
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
+}
+.password-show-btn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon-container{
+  position: absolute;
+  padding-right: 10px;
 }
 
 .card-stretch{
@@ -59,9 +70,8 @@ body{
   color: green;
 }
 .icon-style{
-  position: absolute;
-  margin: -34px 0px -36px 180px;
   border-radius: 45%;
+  font-size: smaller;
   background-color: #F3F5F9 !important;
 }
 .btn-primary {

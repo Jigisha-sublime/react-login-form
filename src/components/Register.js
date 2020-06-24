@@ -145,6 +145,7 @@ const Register = () => {
             <Row>
               <Col>
                 <Form.Group>
+                  <div className="password-show-btn">
                   <Form.Control
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
@@ -152,13 +153,16 @@ const Register = () => {
                     value={password}
                     onChange={onValueChange}
                     className={error.password ? "show-error" : ""} />
+                  <div className="icon-container">
                   <Button
                     className="icon-style"
                     variant="light"
                     size="sm"
                     onClick={toggleShow}>
-                    {showPassword ? "Hide" : "Show"}
+                    {showPassword ? "hide" : "show"}
                   </Button>
+                  </div>
+                  </div>
                   {error.password && <Form.Text className="text-danger">{error.password}</Form.Text>}
                 </Form.Group>
               </Col>
