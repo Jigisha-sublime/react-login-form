@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { Card, Container, Form, Row, Col, InputGroup, Button } from 'react-bootstrap';
+import { Card, Container, Form, Row, Col, Button } from 'react-bootstrap';
 
 import { signupDetails, formState } from './Recoil-state/atom';
 
