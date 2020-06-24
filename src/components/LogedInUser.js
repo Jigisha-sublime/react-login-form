@@ -1,6 +1,8 @@
 import React from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { signupDetails, formState } from '../components/Recoil-state/atom'
+import { Card, Container, Button, Row } from 'react-bootstrap';
+
+import { signupDetails, formState } from '../components/Recoil-state/atom';
 
 const LogedInUser = () => {
     const userData = useRecoilValue(signupDetails)
@@ -13,25 +15,35 @@ const LogedInUser = () => {
     const { fname, lname, email } = userData;
 
     return (
-        <div className="user-details">
-            <h1>Welcome {fname} {lname} </h1>
-            <hr />
-            <h4>
-                <span style={{ color: "black" }}>First Name : </span>
-                <span style={{ color: "grey" }}>{fname}</span>
-            </h4>
-            <h4>
-                <span style={{ color: "black" }}>Last Name : </span>
-                <span style={{ color: "grey" }}>{lname}</span>
-            </h4>
-            <h4>
-                <span style={{ color: "black" }}>Email Id : </span>
-                <span style={{ color: "grey" }}>{email}</span>
-            </h4>
-            <button type="button" className="btn" onClick={logOut}>
-                Logout
-            </button>
-        </div>
+        <Card className="py-3 card-stretch my-5">
+            <Card.Header>
+                <Container fluid>
+                    <Card.Title className="d-flex justify-content-center">
+                        Welcome {fname} {lname}
+                    </Card.Title>
+                </Container>
+            </Card.Header>
+            <Card.Body className="no-border m-auto">
+                <Container fluid>
+                    <Row>
+                        First Name : {fname}
+                    </Row>
+                    <Row>
+                        Last Name : {lname}
+                    </Row>
+                    <Row>
+                        Email Id : {email}
+                    </Row>
+                </Container>
+            </Card.Body>
+            <Card.Footer className="no-border">
+                <Container fluid>
+                    <Button variant="secondary" size="sm"  onClick={logOut}>
+                        Logout
+                    </Button>
+                </Container>
+            </Card.Footer>
+        </Card>
     )
 }
 

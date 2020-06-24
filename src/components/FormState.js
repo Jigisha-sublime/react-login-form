@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import { useRecoilState } from 'recoil'
+import { Button } from 'react-bootstrap'
+
 import { formState } from './Recoil-state/atom'
 
 
@@ -17,12 +19,16 @@ const FormState = () => {
         <Fragment>
             {step !== 2 && (
                 <div className="button-container">
-                    <button type="button" className="btn" onClick={settoLogin}>
-                        Login
-                    </button>
-                    <button type="button" className="btn" onClick={settoSignup}>
-                        Sign Up
-                     </button>
+                    <Button
+                        variant="outline-light"
+                        className="px-5"
+                        onClick={settoLogin}>Login
+                   </Button>
+                    <Button
+                        variant="outline-light"
+                        className="px-5"
+                        onClick={settoSignup}>Sign Up
+                    </Button>
                 </div>)}
         </Fragment>
     )
