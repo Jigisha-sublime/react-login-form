@@ -1,4 +1,4 @@
-# Restaurant Receipt builder 
+# React signup-login form
 
 This project is sample for Sign up and login form. bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
